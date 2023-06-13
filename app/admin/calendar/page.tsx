@@ -2,7 +2,7 @@ interface CalenderProps {}
 
 export default function Calender(props: CalenderProps) {
   return (
-    <div className="relative flex h-[1117px] w-[1728px] items-center overflow-clip bg-white pr-[1419px]">
+    <div className="relative flex items-center overflow-clip bg-white ">
       <div className="font-arial text-white">
         <div className="relative flex h-full w-full justify-center bg-[#208F3A] pb-[928px] pt-[100px]">
           <div className="absolute left-[18px] top-[212px] flex h-[305px] w-[42px] flex-col items-center justify-between gap-[63px]">
@@ -98,14 +98,14 @@ export default function Calender(props: CalenderProps) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clipPath="url(#clip0_4_222)">
+                  <g clipPath="url(#clip0_217_21)">
                     <path
                       d="M 18.01 11.579 L 6.167 21.334 V 31.861 C 6.167 32.134 6.275 32.395 6.468 32.588 C 6.66 32.781 6.922 32.889 7.194 32.889 L 14.393 32.87 C 14.664 32.869 14.925 32.76 15.116 32.567 C 15.308 32.375 15.415 32.114 15.415 31.843 V 25.694 C 15.415 25.422 15.524 25.16 15.716 24.968 C 15.909 24.775 16.171 24.667 16.443 24.667 H 20.554 C 20.827 24.667 21.088 24.775 21.281 24.968 C 21.474 25.16 21.582 25.422 21.582 25.694 V 31.838 C 21.582 31.973 21.608 32.107 21.659 32.232 C 21.711 32.357 21.786 32.471 21.882 32.567 C 21.977 32.663 22.091 32.739 22.216 32.79 C 22.341 32.842 22.475 32.869 22.61 32.869 L 29.806 32.889 C 30.078 32.889 30.34 32.781 30.532 32.588 C 30.725 32.395 30.833 32.134 30.833 31.861 V 21.326 L 18.993 11.579 C 18.854 11.467 18.68 11.406 18.501 11.406 C 18.323 11.406 18.149 11.467 18.01 11.579 Z M 36.717 18.209 L 31.347 13.783 V 4.885 C 31.347 4.681 31.266 4.485 31.121 4.34 C 30.977 4.196 30.781 4.114 30.576 4.114 H 26.979 C 26.775 4.114 26.579 4.196 26.434 4.34 C 26.29 4.485 26.208 4.681 26.208 4.885 V 9.549 L 20.457 4.818 C 19.905 4.364 19.213 4.115 18.498 4.115 C 17.783 4.115 17.091 4.364 16.539 4.818 L 0.279 18.209 C 0.201 18.274 0.136 18.353 0.089 18.442 C 0.041 18.532 0.012 18.63 0.002 18.731 C-0.007 18.831 0.003 18.933 0.033 19.03 C 0.063 19.127 0.111 19.217 0.176 19.295 L 1.814 21.286 C 1.878 21.364 1.958 21.429 2.047 21.477 C 2.137 21.524 2.235 21.554 2.335 21.564 C 2.436 21.573 2.538 21.563 2.635 21.533 C 2.732 21.504 2.822 21.455 2.9 21.391 L 18.01 8.946 C 18.149 8.833 18.323 8.772 18.501 8.772 C 18.68 8.772 18.854 8.833 18.993 8.946 L 34.103 21.391 C 34.181 21.455 34.271 21.504 34.368 21.534 C 34.465 21.563 34.566 21.574 34.667 21.564 C 34.768 21.555 34.866 21.525 34.955 21.478 C 35.045 21.431 35.124 21.366 35.189 21.288 L 36.827 19.297 C 36.891 19.218 36.939 19.128 36.969 19.03 C 36.998 18.933 37.008 18.831 36.998 18.73 C 36.988 18.629 36.958 18.531 36.91 18.442 C 36.862 18.352 36.796 18.273 36.717 18.209 Z"
                       fill="#FFFBFB"
                     />
                   </g>
                   <defs>
-                    <clipPath id="clip0_4_222">
+                    <clipPath id="clip0_217_21">
                       <rect width="37" height="37" fill="white" />
                     </clipPath>
                   </defs>
@@ -144,6 +144,9 @@ export default function Calender(props: CalenderProps) {
       </div>
       <div className="font-arial text-left font-bold text-[#0A0909]">
         <p className="absolute left-[345px] top-10 h-[34px] w-[154px] text-3xl">Tổng quan</p>
+      </div>
+      <div className="w-full">
+        <div className="absolute left-[423px] top-72 h-[25px] w-[25px] bg-[#00000000]" />
       </div>
       <div className="font-arial w-full text-left font-normal text-[#ABA5A5]">
         <div className="absolute left-[351px] top-[117px] flex h-[67px] w-[997px] gap-[0]">
@@ -213,14 +216,543 @@ export default function Calender(props: CalenderProps) {
           </div>
         </div>
       </div>
-      <div className="w-full">
-        <div className="absolute left-[423px] top-72 h-[25px] w-[25px] bg-[#00000000]" />
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] right-[43px] h-[140px] w-[193px] pb-[86px] pl-[26px] pr-[125px] pt-2.5">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M 0.629 1.437 H 192.511 V 136 C 192.511 138.485 190.497 140.5 188.011 140.5 H 0.629 V 1.437 Z"
+                fill="#F5F5F5"
+                stroke="#E7E8EA"
+              />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">4</p>
+        </div>
       </div>
-
-      {/* calendar */}
-
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] right-[234px] h-[140px] w-48 pb-[86px] pl-[21px] pr-[130px] pt-2.5">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.941 1.437 H 192.317 V 140.5 H 0.941 V 1.437 Z" fill="#F5F5F5" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">3</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] right-[425px] h-[140px] w-48 pb-[86px] pl-[26px] pr-[124px] pt-2.5">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.253 1.437 H 192.629 V 140.5 H 1.253 V 1.437 Z" fill="#F5F5F5" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">2</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] right-[616px] h-[140px] w-48 pb-[86px] pl-[26px] pr-[124px] pt-2.5">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.565 1.437 H 191.94 V 140.5 H 0.565 V 1.437 Z" fill="#F5F5F5" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">1</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] left-[729px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.876 1.437 H 192.252 V 140.5 H 0.876 V 1.437 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">31</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] left-[539px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.188 1.437 H 192.564 V 140.5 H 1.188 V 1.437 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">30</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[42px] left-[348px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M 0.5 1.437 H 191.876 V 140.5 H 5 C 2.515 140.5 0.5 138.485 0.5 136 V 1.437 Z"
+                fill="white"
+                stroke="#E7E8EA"
+              />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">29</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] right-[43px] h-[140px] w-[193px] border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[136px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.629 1.061 H 192.511 V 140.124 H 0.629 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">28</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] right-[234px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.941 1.061 H 192.317 V 140.124 H 0.941 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">27</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] right-[425px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.253 1.061 H 192.629 V 140.124 H 1.253 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">26</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] right-[616px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.565 1.061 H 191.94 V 140.124 H 0.565 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">25</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] left-[729px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.876 1.061 H 192.252 V 140.124 H 0.876 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">24</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] left-[539px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.188 1.061 H 192.564 V 140.124 H 1.188 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">23</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[180px] left-[348px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.5 1.061 H 191.876 V 140.124 H 0.5 V 1.061 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">22</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] right-[43px] h-[140px] w-[193px] border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[136px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.629 0.686 H 192.511 V 139.749 H 0.629 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">21</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] right-[234px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.941 0.686 H 192.317 V 139.749 H 0.941 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">20</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] right-[425px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.253 0.686 H 192.629 V 139.749 H 1.253 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">19</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] right-[616px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.565 0.686 H 191.94 V 139.749 H 0.565 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">18</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] left-[729px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.876 0.686 H 192.252 V 139.749 H 0.876 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">17</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] left-[539px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.188 0.686 H 192.564 V 139.749 H 1.188 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">16</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[319px] left-[348px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.5 0.686 H 191.876 V 139.749 H 0.5 V 0.686 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">15</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] right-[43px] h-[140px] w-[193px] border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[136px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.629 1.31 H 192.511 V 140.373 H 0.629 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">14</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] right-[234px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.941 1.31 H 192.317 V 140.373 H 0.941 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">13</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] right-[425px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.253 1.31 H 192.629 V 140.373 H 1.253 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">12</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] right-[616px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.565 1.31 H 191.94 V 140.373 H 0.565 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">11</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] left-[729px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[135px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.876 1.31 H 192.252 V 140.373 H 0.876 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[42px] text-xl uppercase">10</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] left-[539px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[155px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.188 1.31 H 192.564 V 140.373 H 1.188 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[22px] text-xl uppercase">9</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute bottom-[457px] left-[348px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[155px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.5 1.31 H 191.876 V 140.373 H 0.5 V 1.31 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[22px] text-xl uppercase">8</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute right-[43px] top-[381px] h-[140px] w-[193px] border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[156px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.629 0.935 H 192.511 V 139.998 H 0.629 V 0.935 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[22px] text-xl uppercase">7</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute right-[234px] top-[381px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[155px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 193 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 0.941 0.935 H 192.317 V 139.998 H 0.941 V 0.935 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[22px] text-xl uppercase">6</p>
+        </div>
+      </div>
+      <div className="font-roboto_mono w-full text-left font-bold text-black">
+        <div className="absolute right-[425px] top-[381px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[155px] pt-2.5 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
+            <svg
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 194 141"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 1.253 0.935 H 192.629 V 139.998 H 1.253 V 0.935 Z" fill="white" stroke="#E7E8EA" />
+            </svg>
+          </div>
+          <p className="relative inline h-11 w-[22px] text-xl uppercase">5</p>
+        </div>
+      </div>
       <div className="w-full font-bold">
-        <div className="absolute right-[616px] top-[381px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-5 pl-2.5 pr-3 pt-[99px] [border-bottom-width:undefined]">
+        <div className="absolute right-[616px] top-[381px] flex h-[140px] w-48 items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[51px] pl-[43px] pr-10 pt-6 [border-bottom-width:undefined]">
           <div className="absolute inset-[0]">
             <svg
               width="100%"
@@ -233,16 +765,14 @@ export default function Calender(props: CalenderProps) {
               <path d="M 0.565 0.935 H 191.94 V 139.998 H 0.565 V 0.935 Z" fill="white" stroke="#E7E8EA" />
             </svg>
           </div>
-          <p className="font-roboto_mono absolute left-[15px] top-2.5 inline h-11 w-[22px] text-left text-xl uppercase text-black">
-            4
+          <p className="font-roboto_mono absolute left-[15px] top-2.5 h-11 w-[22px] text-left text-xl uppercase text-black">4</p>
+          <p className="font-arial absolute inset-x-[0] bottom-5 mx-auto h-[21px] w-[170px] text-center text-lg text-[#01A01A]">
+            Tăng ca - Làm thêm
           </p>
-          <p className="font-arial relative inline h-[21px] w-[170px] text-center text-lg text-[#01A01A]">Tăng ca - Làm thêm</p>
-          <p className="font-arial absolute right-9 top-[50px] inline h-[35px] w-[93px] text-left text-[29px] uppercase text-black">
-            1.35
-          </p>
-          <p className="font-arial absolute left-9 top-[21px] inline h-[21px] w-[109px] text-left text-lg uppercase text-[#696767]">
-            08:23 - 20:15
-          </p>
+          <div className="font-arial relative flex h-full w-full flex-col items-center justify-between gap-[9px]">
+            <p className="h-[21px] w-[109px] text-left text-lg uppercase text-[#696767]">08:23 - 20:15</p>
+            <p className="h-[35px] w-[88px] text-center text-[29px] uppercase text-black">1.35</p>
+          </div>
           <div className="absolute right-4 top-[22px] h-5 w-5">
             <svg
               width="100%"
@@ -261,7 +791,7 @@ export default function Calender(props: CalenderProps) {
         </div>
       </div>
       <div className="w-full font-bold">
-        <div className="absolute left-[729px] top-[381px] h-[140px] w-48 border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[86px] pl-[15px] pr-[155px] pt-2.5 [border-bottom-width:undefined]">
+        <div className="absolute left-[729px] top-[381px] flex h-[140px] w-48 items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-5 pl-[62px] pr-14 pt-[99px] [border-bottom-width:undefined]">
           <div className="absolute inset-[0]">
             <svg
               width="100%"
@@ -274,10 +804,8 @@ export default function Calender(props: CalenderProps) {
               <path d="M 0.876 0.935 H 192.252 V 139.998 H 0.876 V 0.935 Z" fill="white" stroke="#E7E8EA" />
             </svg>
           </div>
-          <p className="font-roboto_mono relative inline h-11 w-[22px] text-left text-xl uppercase text-black">3</p>
-          <p className="font-arial absolute bottom-[17px] right-[75px] inline h-[21px] w-[41px] text-center text-lg text-[#F52E2E]">
-            Nghỉ
-          </p>
+          <p className="font-roboto_mono absolute left-[15px] top-2.5 h-11 w-[22px] text-left text-xl uppercase text-black">3</p>
+          <p className="font-arial relative h-[21px] w-[75px] text-center text-lg text-[#F52E2E]">Nghỉ</p>
           <div className="absolute right-3.5 top-7 h-5 w-5">
             <svg
               width="100%"
@@ -296,26 +824,28 @@ export default function Calender(props: CalenderProps) {
         </div>
       </div>
       <div className="w-full font-bold">
-        <div className="absolute left-[539px] top-[381px] flex h-[140px] w-48 items-center justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] py-[53px] pl-16 pr-[35px] [border-bottom-width:undefined]">
+        <div className="absolute left-[539px] top-[381px] flex h-[140px] w-[193px] items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[51px] pl-[42px] pr-4 pt-6 [border-bottom-width:undefined]">
           <div className="absolute inset-[0]">
             <svg
               width="100%"
               height="100%"
               preserveAspectRatio="none"
-              viewBox="0 0 194 141"
+              viewBox="0 0 193 140"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M 1.188 0.935 H 192.564 V 139.998 H 1.188 V 0.935 Z" fill="white" stroke="#E7E8EA" />
+              <path d="M 0.5 0.5 H 192.5 V 139.5 H 0.5 V 0.5 Z" fill="white" stroke="#E7E8EA" />
             </svg>
           </div>
-          <p className="font-roboto_mono absolute left-[15px] top-2.5 h-11 w-[22px] text-left text-xl uppercase text-black">2</p>
-          <div className="font-arial absolute inset-x-[0] bottom-[17px] mx-auto flex h-[21px] w-[154px] items-center justify-center bg-[#F5CA2E] text-center text-[#F5CA2E]">
-            <p className="h-[21px] w-[154px] text-lg">Đi muộn - Về sớm</p>
-          </div>
-          <p className="font-arial relative h-[35px] w-[93px] text-left text-[29px] uppercase text-black">0.84</p>
-          <div className="font-arial absolute right-[15px] top-6 flex h-[21px] w-[140px] items-center justify-between gap-[11px] text-left text-[#696767]">
-            <p className="h-[21px] w-[109px] flex-grow text-lg uppercase">08:45 - 17:15</p>
+          <p className="font-roboto_mono absolute left-[9px] top-[11px] h-11 w-3.5 text-left text-xl uppercase text-black">2</p>
+          <p className="font-arial absolute inset-x-[0] bottom-5 mx-auto h-[21px] w-[162px] text-center text-lg text-[#F5CA2E]">
+            Đi muộn - Về sớm
+          </p>
+          <div className="font-arial relative flex h-full w-full justify-between gap-1.5">
+            <div className="flex h-full flex-grow flex-col items-center justify-between gap-[9px]">
+              <p className="h-[21px] w-[109px] text-left text-lg uppercase text-[#696767]">08:45 - 17:15</p>
+              <p className="h-[35px] w-[78px] text-center text-[29px] uppercase text-black">0.84</p>
+            </div>
             <div className="h-5 w-5">
               <svg
                 width="100%"
@@ -335,24 +865,23 @@ export default function Calender(props: CalenderProps) {
         </div>
       </div>
       <div className="w-full text-left font-bold">
-        <div className="absolute left-[348px] top-[381px] flex h-[140px] w-48 items-end justify-end border-solid border-[#331111] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[51px] pl-[42px] pr-2.5 pt-6 opacity-10 [border-bottom-width:undefined]">
-          <div className="absolute inset-[0] opacity-10">
+        <div className="absolute left-[348px] top-[381px] flex h-[140px] w-[191px] items-end justify-end border-solid border-[#331111] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-[95px] pl-[42px] pr-[9px] pt-6 opacity-10 [border-bottom-width:undefined]">
+          <div className="absolute inset-[0]">
             <svg
               width="100%"
               height="100%"
               preserveAspectRatio="none"
-              viewBox="0 0 193 141"
+              viewBox="0 0 191 141"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path opacity="0.1" d="M 0.5 0.935 H 191.876 V 139.998 H 0.5 V 0.935 Z" fill="white" stroke="#331111" />
+              <path opacity="0.1" d="M 0.5 0.935 H 190.5 V 139.998 H 0.5 V 0.935 Z" fill="white" stroke="#331111" />
             </svg>
           </div>
-          <div className="font-arial relative flex h-full w-full justify-between gap-[11px]">
-            <div className="flex h-full flex-grow flex-col items-center justify-between gap-[9px]">
-              <p className="h-[21px] w-[109px] text-lg uppercase text-[#696767]">08:23 - 17:45</p>
-              <p className="h-[35px] w-[17px] text-3xl uppercase text-black">1</p>
-            </div>
+          <p className="font-arial absolute bottom-[51px] left-[86px] h-[35px] w-[17px] text-3xl uppercase text-black">1</p>
+          <p className="font-roboto_mono absolute left-[15px] top-2.5 h-11 w-[22px] text-xl uppercase text-black">1</p>
+          <div className="font-arial relative flex h-full w-full items-center justify-between gap-[11px] text-[#696767]">
+            <p className="h-[21px] w-[109px] flex-grow text-lg uppercase">08:23 - 17:45</p>
             <div className="h-5 w-5">
               <svg
                 width="100%"
@@ -369,7 +898,6 @@ export default function Calender(props: CalenderProps) {
               </svg>
             </div>
           </div>
-          <p className="font-roboto_mono absolute left-[15px] top-2.5 h-11 w-[22px] text-xl uppercase text-black">1</p>
         </div>
       </div>
       <div className="">
@@ -492,7 +1020,7 @@ export default function Calender(props: CalenderProps) {
         </div>
       </div>
       <div className="font-arial w-full text-center font-normal">
-        {/* <div className="absolute right-[43px] top-[200px] flex h-[116px] w-[1337px] items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-1.5 pl-[3px] pt-[21px] [border-bottom-width:undefined]">
+        <div className="absolute right-[43px] top-[200px] flex h-[116px] w-[1337px] items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-1.5 pl-[3px] pt-[21px] [border-bottom-width:undefined]">
           <div className="absolute inset-[0]">
             <svg
               width="100%"
@@ -503,18 +1031,18 @@ export default function Calender(props: CalenderProps) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M 1336.5 5.755 V 116.429 H 0.511 V 5.755 C 0.511 3.269 2.526 1.255 5.011 1.255 H 684.258 H 1332 C 1334.49 1.255 1336.5 3.269 1336.5 5.755 Z"
+                d="M 0.511 5.755 C 0.511 3.269 2.526 1.255 5.011 1.255 H 684.258 H 1332 C 1334.49 1.255 1336.5 3.269 1336.5 5.755 V 116.429 H 0.511 V 5.755 Z"
                 fill="#E7E8EA"
                 stroke="#E7E8EA"
               />
             </svg>
           </div>
-          <div className="relative h-full w-full bg-gray pb-[18px] pl-[520px] pr-[572px] pt-[47px]">
+          <div className="relative h-full w-full bg-black pb-[18px] pl-[520px] pr-[572px] pt-[47px]">
             <p className="inline h-[25px] w-[241px] text-[22px] text-black">01/03/2023 - 31/03/2023</p>
             <p className="absolute inset-y-[0] right-[344px] my-auto inline h-[69px] w-9 text-[60px] text-[#ABA5A5]">{">"}</p>
             <p className="absolute inset-y-[0] left-[341px] my-auto inline h-[69px] w-9 text-[60px] text-[#ABA5A5]">{">"}</p>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="w-full">
         <div className="absolute bottom-2.5 right-[670px] flex h-3.5 w-[41px] items-center justify-between gap-[13px]">
