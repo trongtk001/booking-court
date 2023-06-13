@@ -1,4 +1,4 @@
-import LoginBackground from "@/components/login_background";
+import LoginBackground from "@/Components/login_background";
 import Image from "next/image";
 import React from "react";
 

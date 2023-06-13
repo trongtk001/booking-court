@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import Button from "@/Components/button";
 import Link from "next/link";
 import * as React from "react";
 import { twMerge } from "tailwind-merge";

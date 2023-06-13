@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/button";
+import Button from "@/Components/button";
 import Image from "next/image";
 import { Alert } from "flowbite-react";
 
