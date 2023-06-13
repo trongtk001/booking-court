@@ -4,9 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-export interface ILoginProps {
-  className?: string;
-}
+export interface ILoginProps {}
 
 export default function Login(props: ILoginProps) {
   const className = {
@@ -47,7 +45,7 @@ export default function Login(props: ILoginProps) {
   async function handleSumit() {}
 
   return (
-    <div className={twMerge(className.container, props.className)}>
+    <div className={twMerge(className.container)}>
       <h1 className={className.title}>Login</h1>
       <p className={className.description}>Sign in with your data that you entered during your registration.</p>
       <form className={className.form}>

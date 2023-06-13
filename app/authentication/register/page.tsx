@@ -3,9 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import { twMerge } from "tailwind-merge";
 
-export interface IRegisterProps {
-  className?: string;
-}
+export interface IRegisterProps {}
 
 export default function Register(props: IRegisterProps) {
   const className = {
@@ -16,7 +14,7 @@ export default function Register(props: IRegisterProps) {
   };
 
   return (
-    <div className={twMerge("w-[366px]", props.className)}>
+    <div className={twMerge("w-[366px]")}>
       <h1 className="w-[350px] h-[82px] font-bold text-6xl leading-[82px] mb-1">Register</h1>
       <form className="flex flex-col">
         <label className={className.label} htmlFor="txtFirstName">
