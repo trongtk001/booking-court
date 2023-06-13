@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-interface ILoginProps {
+export interface ILoginProps {
   className?: string;
 }
 
