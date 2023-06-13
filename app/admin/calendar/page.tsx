@@ -1024,7 +1024,7 @@ export default function Calender(props: CalenderProps) {
         </div>
       </div>
       <div className="font-arial w-full text-center font-normal">
-        <div className="absolute right-[43px] top-[200px] flex h-[116px] w-[1337px] items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-1.5 pl-[3px] pt-[21px] [border-bottom-width:undefined]">
+        {/* <div className="absolute right-[43px] top-[200px] flex h-[116px] w-[1337px] items-end justify-end border-solid border-[#E7E8EA] border-l-[undefined] border-r-[undefined] border-t-[undefined] pb-1.5 pl-[3px] pt-[21px] [border-bottom-width:undefined]">
           <div className="absolute inset-[0]">
             <svg
               width="100%"
@@ -1046,7 +1046,7 @@ export default function Calender(props: CalenderProps) {
             <p className="absolute inset-y-[0] right-[344px] my-auto inline h-[69px] w-9 text-[60px] text-[#ABA5A5]">{">"}</p>
             <p className="absolute inset-y-[0] left-[341px] my-auto inline h-[69px] w-9 text-[60px] text-[#ABA5A5]">{">"}</p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="w-full">
         <div className="absolute bottom-2.5 right-[670px] flex h-3.5 w-[41px] items-center justify-between gap-[13px]">
