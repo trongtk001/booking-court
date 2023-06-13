@@ -1,4 +1,4 @@
-import Button from "@/Components/button";
+import Button from "@/components/button";
 import Link from "next/link";
 import * as React from "react";
 import { twMerge } from "tailwind-merge";
@@ -20,7 +20,7 @@ export default function Register(props: IRegisterProps) {
         <label className={className.label} htmlFor="txtFirstName">
           Name
         </label>
-        <div className="flex flex-row justify-between">
+        <div className="w-[350px] flex flex-row justify-between">
           <input className={twMerge(className.input, "w-[169px]")} type="text" id="txtFirstName" placeholder="First name" />
           <input className={twMerge(className.input, "w-[169px]")} type="text" id="txtLastName" placeholder="Last name" />
         </div>
@@ -53,7 +53,12 @@ export default function Register(props: IRegisterProps) {
             value="player"
           />
           <span className="ml-[14px]">Player</span>
-          <input className="ml-11" type="radio" name="role" value="owner" />
+          <input
+            className="ml-11 border-grayLight border-2 text-primary mr-3 focus:ring-primary"
+            type="radio"
+            name="role"
+            value="owner"
+          />
           <span className="ml-[14px]">Owner</span>
         </div>
 

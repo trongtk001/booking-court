@@ -1,4 +1,4 @@
-import Button from "@/Components/button";
+import Button from "@/components/button";
 import Example from "./exmaple/page";
 export interface IHomeProps {}
 
