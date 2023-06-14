@@ -1,28 +1,28 @@
-import Button from "@/Components/button";
-import Link from "next/link";
-import * as React from "react";
-import { twMerge } from "tailwind-merge";
+import Button from '@/Components/button';
+import Link from 'next/link';
+import * as React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export interface IRegisterProps {}
 
 export default function Register(props: IRegisterProps) {
   const className = {
-    label: "h-4 font-semibold text-xs leading-4 text-textLight mb-1",
+    label: 'h-4 font-semibold text-xs leading-4 text-textLight mb-1',
     input:
-      "w-[350px] h-10 outline-none rounded-lg border-grayLight border-[1px] mb-5 " +
-      "focus:ring-primaryLight focus:ring-2 focus:border-none",
+      'w-[350px] h-10 outline-none rounded-lg border-grayLight border-[1px] mb-5 ' +
+      'focus:ring-primaryLight focus:ring-2 focus:border-none',
   };
 
   return (
-    <div className={twMerge("w-[366px]")}>
+    <div className={twMerge('w-[366px]')}>
       <h1 className="w-[350px] h-[82px] font-bold text-6xl leading-[82px] mb-1">Register</h1>
       <form className="flex flex-col">
         <label className={className.label} htmlFor="txtFirstName">
           Name
         </label>
         <div className="w-[350px] flex flex-row justify-between">
-          <input className={twMerge(className.input, "w-[169px]")} type="text" id="txtFirstName" placeholder="First name" />
-          <input className={twMerge(className.input, "w-[169px]")} type="text" id="txtLastName" placeholder="Last name" />
+          <input className={twMerge(className.input, 'w-[169px]')} type="text" id="txtFirstName" placeholder="First name" />
+          <input className={twMerge(className.input, 'w-[169px]')} type="text" id="txtLastName" placeholder="Last name" />
         </div>
 
         <label className={className.label} htmlFor="txtEmail">
@@ -66,13 +66,13 @@ export default function Register(props: IRegisterProps) {
           <input className="w-5 h-5 rounded border-grayLight border-2 text-primary mr-3 focus:ring-primary" type="checkbox" />
           <div className="w-[299px] text-sm font-normal leading-5 colo">
             <span>
-              By clicking “Register” you agree to the <br /> tennique{" "}
+              By clicking “Register” you agree to the <br /> tennique{' '}
             </span>
-            <Link className="underline underline-offset-1" href={""}>
+            <Link className="underline underline-offset-1" href={''}>
               Terms & Conditions
             </Link>
             <span> and </span>
-            <Link className="underline underline-offset-1" href={""}>
+            <Link className="underline underline-offset-1" href={''}>
               Privacy Policy. *
             </Link>
           </div>

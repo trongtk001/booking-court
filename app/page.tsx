@@ -1,5 +1,5 @@
-import Button from "@/Components/button";
-import Example from "./exmaple/page";
+import Button from '@/Components/button';
+import Example from './exmaple/page';
 export interface IHomeProps {}
 
 export default function Home(props: IHomeProps) {
