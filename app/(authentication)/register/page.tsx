@@ -78,7 +78,9 @@ export default function Register(props: IRegisterProps) {
           </div>
         </div>
 
-        <Button classname="mt-11">Register</Button>
+        <Button className="mt-11" type="button">
+          Register
+        </Button>
       </form>
     </div>
   );

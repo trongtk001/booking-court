@@ -1,5 +1,5 @@
 export interface ICalendarData {
-    title: string,
+    workingStatus: string[],
     startDate: Date,
     endDate: Date,
 }

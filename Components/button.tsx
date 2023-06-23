@@ -1,40 +1,41 @@
-import { cva } from "class-variance-authority";
-import { twMerge } from "tailwind-merge";
+import { cva, VariantProps } from 'class-variance-authority';
+import { twMerge } from 'tailwind-merge';
 
 //"",
 const button = cva(
   [
-    "rounded-lg gap-2 relative duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500",
+    'rounded-lg gap-2 relative text-white duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500',
   ],
   {
     variants: {
       intent: {
-        primary: "bg-primary hover:bg-primaryDark active:bg-primaryLight",
+        primary: 'bg-primary hover:bg-primaryDark active:bg-primaryLight',
+        red: 'bg-red-600 hover:bg-red-700 active:bg-red-500',
+        blue: 'bg-blue-600 hover:bg-blue-700 active:bg-blue-500',
       },
+      size: {
+        small: '',
+        medium: '',
+        large: 'w-[350px] h-11',
+      },
+    },
+    defaultVariants: {
+      intent: 'primary',
+      size: 'large',
     },
   }
 );
 
-export interface IButtonProps {
-  classname?: string;
-  style?: React.CSSProperties;
-  onclick?: () => void;
+export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof button> {
   disabled?: boolean;
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
 }
 
-export default function Button({ classname, style, onclick, disabled, children, type }: IButtonProps) {
-  const className = twMerge(
-    ` bg-primary w-[350px] h-11 rounded-lg gap-2 relative duration-300 shadow-sm text-white
-        hover:bg-primaryDark hover:duration-100
-        active:top-[1px] active:bg-primaryLight active:shadow-buttonShadow active:shadow-slate-500
-        ` + classname
-  );
-
+export default function Button({ className, intent, size, children, disabled, type, ...props }: IButtonProps) {
   return (
     <>
-      <button style={style} className={className} onClick={onclick} disabled={disabled} type={type}>
+      <button className={twMerge(button({ intent, size, className }))} disabled={disabled} type={type} {...props}>
         {children}
       </button>
     </>
