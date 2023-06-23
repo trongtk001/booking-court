@@ -107,7 +107,7 @@ export default function LoginForm() {
         </Button>
 
         <p className={className.signUpLink.text}>
-          Don’t have an account?{' '}
+          Don’t have an account?&nbsp;
           <Link className={className.signUpLink.link} href={publicRoutes.register}>
             Sign up
           </Link>

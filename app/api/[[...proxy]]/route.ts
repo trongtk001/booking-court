@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 async function proxy(request: Request) {
   const url = request.url;
   const uri = url.substring(url.indexOf('api') + 3);
-
+  console.log('proxy', uri);
   redirect('http://localhost:5108/api' + uri);
 }
 

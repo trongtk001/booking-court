@@ -4,6 +4,9 @@ const publicRoutes = {
   register: '/register',
 };
 
-const privateRoutes = {};
+const privateRoutes = {
+  managerCourt: '/admin/manager-court',
+  calendar: '/admin/calendar',
+};
 
 export { publicRoutes, privateRoutes };

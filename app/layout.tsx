@@ -2,6 +2,8 @@ import './globals.css';
 import { Nunito } from 'next/font/google';
 import AuthProvider from '@/Components/auth-provider/auth-provider';
 import { Session } from 'next-auth';
+import Flowbite from '@/Components/flow-bite/flowbite';
+import { theme } from './theme';
 const nuntito = Nunito({ subsets: ['latin'] });
 
 export const metadata = {
@@ -18,7 +20,9 @@ export default function RootLayout({ children, session }: IRootLayoutProps) {
   return (
     <html lang="en">
       <body className={nuntito.className + ' '} suppressHydrationWarning={true}>
-        <AuthProvider session={session}>{children}</AuthProvider>
+        <AuthProvider session={session}>
+          <Flowbite theme={{ theme }}>{children}</Flowbite>
+        </AuthProvider>
       </body>
     </html>
   );

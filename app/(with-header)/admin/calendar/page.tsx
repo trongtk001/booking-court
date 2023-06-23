@@ -5,7 +5,6 @@ import { GetMonth } from './util';
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import dayjs from 'dayjs';
-import { getSession } from 'next-auth/react';
 
 const className = {
   dayOfWeek: {
