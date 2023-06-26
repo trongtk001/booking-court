@@ -44,3 +44,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(165, 164, 164);
 }
+
+.snap-mandatory {
+  border-radius: 0;
+}

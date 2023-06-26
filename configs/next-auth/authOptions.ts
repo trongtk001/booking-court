@@ -1,9 +1,9 @@
 import { User } from '@/model/user';
 import { publicRoutes } from '@/routes';
-import { NextAuthOptions } from 'next-auth';
+import { AuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-export const authOptions: NextAuthOptions = {
+export const authOptions: AuthOptions = {
   // Configure one or more authentication providers
   providers: [
     CredentialsProvider({
@@ -11,20 +11,24 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'email', placeholder: 'jsmith' },
         password: { label: 'Password', type: 'password' },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         const { email, password } = credentials as any;
 
-        const res = await fetch('http://localhost:3000/api/User/Login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }),
-        });
-
-        const user = (await res.json()).result;
-        if (res.ok && user) {
-          return user;
+        try {
+          const response = await fetch(process.env.NEXTAUTH_URL + '/api/User/Login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+          });
+          const user = (await response.json()).result;
+          if (response.ok && user) {
+            return user;
+          }
+        } catch (error) {
+          console.log('authOptions', error);
+          throw new Error('Invalid credentials');
         }
-        return null;
+        // return null;
       },
     }),
   ],
@@ -33,14 +37,16 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: publicRoutes.login,
+    error: publicRoutes.login,
   },
   callbacks: {
     jwt: async ({ token, user }) => {
       return { ...token, ...user };
     },
-    session: async ({ session, token }) => {
-      session.user = token as User;
+    session: async ({ session, token, user }) => {
+      session.user = { email: token.email, id: token.id, userName: token.userName, role: token.role } as User;
       return session;
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };

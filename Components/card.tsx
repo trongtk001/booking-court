@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import courtImage from '@/assets/court.svg';
-import paperAirPlane from '@/assets/paper-airplane.svg';
+import courtImage from '@/public/assets/court.svg';
+import paperAirPlane from '@/public/assets/paper-airplane.svg';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import Rating from './rating';

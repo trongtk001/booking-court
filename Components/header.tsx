@@ -1,15 +1,22 @@
-import { privateRoutes, publicRoutes } from '@/routes';
+import { authOptions } from '@/configs/next-auth/authOptions';
+import { dropdownLink, headerLink } from '@/configs/route/header';
+import { User } from '@/model';
+import { publicRoutes } from '@/routes';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+import { getServerSession } from 'next-auth';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from './button';
 import Avatar from './flow-bite/avatar';
-import Dropdown, { Header as DropDownHeader, Item, Divider } from './flow-bite/dropdown';
+import Dropdown, { Divider, Header as DropDownHeader, Item } from './flow-bite/dropdown';
 import Navbar, { Brand, Collapse, Link as NavbarLink, Toggle } from './flow-bite/nav-bar';
 import LogoutBtn from './logout-btn';
 
 export interface IHeaderProps {}
 
 export default async function Header() {
+  const user = (await getServerSession(authOptions))?.user;
+
   return (
     <Navbar className={className.header} fluid>
       <Brand as={Link} href={publicRoutes.home}>
@@ -17,30 +24,7 @@ export default async function Header() {
       </Brand>
 
       <div className="flex md:order-2">
-        <Dropdown
-          inline
-          arrowIcon={false}
-          label={
-            <Avatar
-              className={className.avatar}
-              alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded
-            />
-          }
-        >
-          <DropDownHeader>
-            <span className={className.dropdownHeader}>Bonnie Green</span>
-            <span className={className.dropdownHeaderName}>name@flowbite.com</span>
-          </DropDownHeader>
-          <Item>Dashboard</Item>
-          <Item>Settings</Item>
-          <Item>Earnings</Item>
-          <Divider />
-          <LogoutBtn>
-            <Item>Sign out</Item>;
-          </LogoutBtn>
-        </Dropdown>
+        <UserAvatar user={user} />
         <Toggle />
       </div>
 
@@ -49,12 +33,13 @@ export default async function Header() {
           <input className={className.searchInput} type="text" placeholder="Search" />
           <MagnifyingGlassIcon className={className.searchIcon} />
         </div>
-        <NavbarLink as={Link} href={privateRoutes.calendar} className={className.navbarLink}>
-          Browse
-        </NavbarLink>
-        <NavbarLink as={Link} href={privateRoutes.managerCourt} className={className.navbarLink}>
-          My activities
-        </NavbarLink>
+        {headerLink.map((item, i) => (
+          <>
+            <NavbarLink key={i} as={Link} href={item.path} className={className.navbarLink}>
+              {item.title}
+            </NavbarLink>
+          </>
+        ))}
       </Collapse>
     </Navbar>
   );
@@ -75,5 +60,43 @@ const className = {
     ' sm:mb-1 lg:mr-auto',
   searchInput: 'h-10 border-none bg-transparent' + ' focus:ring-0',
   searchIcon: 'w-4 h-10 inline mr-3',
-  navbarLink: 'leading-10 hover:cursor-pointer',
+  navbarLink: 'h-10 inline-block leading-10 hover:cursor-pointer truncate',
+};
+
+const UserAvatar = ({ user }: { user: User | undefined }) => {
+  if (!user)
+    return (
+      <Link className="p-2 mb-1 hover:text-primary" href={publicRoutes.login}>
+        Login
+      </Link>
+    );
+
+  return (
+    <Dropdown
+      inline
+      arrowIcon={false}
+      label={
+        <Avatar
+          className={className.avatar}
+          alt="User settings"
+          img={user?.image || 'https://flowbite.com/docs/images/people/profile-picture-5.jpg'}
+          rounded
+        />
+      }
+    >
+      <DropDownHeader>
+        <span className={className.dropdownHeader}>{user.userName}</span>
+        <span className={className.dropdownHeaderName}>{user.email}</span>
+      </DropDownHeader>
+      {dropdownLink.map((item, i) => (
+        <Item key={i}>
+          <Link href={item.path}>{item.title}</Link>
+        </Item>
+      ))}
+      <Divider />
+      <LogoutBtn>
+        <Item>Sign out</Item>;
+      </LogoutBtn>
+    </Dropdown>
+  );
 };

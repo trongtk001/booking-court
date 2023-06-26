@@ -4,6 +4,7 @@ export type User = {
   userName: string;
   email: string;
   role: number;
-  token: string;
-  tokenExpiredAt: Date;
+  token: string | null;
+  tokenExpiredAt: Date | null;
+  image: string;
 };

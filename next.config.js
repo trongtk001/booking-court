@@ -1,19 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  async redirects() {
+  redirects: async () => {
     return [
       {
         source: '/',
-        destination: '/login',
-        permanent: true,
+        destination: '/browser-court',
+        permanent: false,
       },
     ];
   },
-
   env: {
-    NEXTAUTH_URL: 'http://localhost:3000/',
+    API_URL: 'http://localhost:5108',
+    NEXTAUTH_URL: 'http://localhost:3000',
     NEXTAUTH_SECRET: 'secret',
+    API_PREFIX: '/api',
   },
 };
 

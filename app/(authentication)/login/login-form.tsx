@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { FormEvent } from 'react';
+import facebookIcon from '@/public/facebook.png';
+import googleIcon from '@/public/google_icon.svg';
 
 const className = {
   form: 'flex flex-col',
@@ -31,7 +33,7 @@ const className = {
   },
   googleButton: {
     button: 'mt-[5px]',
-    icon: 'inline-block absolute left-7 top-1/2 transform -translate-y-1/2 text-white',
+    icon: 'h-auto w-auto inline-block absolute left-7 top-1/2 transform -translate-y-1/2 text-white',
   },
   signUpLink: {
     text: 'w-[350px] h-5 font-normal text-sm leading-5 text-textLight text-center mt-9',
@@ -52,11 +54,11 @@ export default function LoginForm() {
       password: String(target.password.value),
     };
 
-    const result = await signIn('credentials', {
+    await signIn('credentials', {
       email: data.email,
       password: data.password,
       redirect: true,
-      callbackUrl: searchParams.get('callbackUrl') || '/admin/calendar',
+      callbackUrl: searchParams?.get('callbackUrl') || '/admin/calendar',
     });
   }
 
@@ -94,14 +96,14 @@ export default function LoginForm() {
 
         <Button className={className.faceBookButton.button} intent="blue">
           <div>
-            <Image className={className.faceBookButton.icon} src="/facebook.png" alt="facebook icon" width={32} height={32} />
+            <Image className={className.faceBookButton.icon} src={facebookIcon} alt="facebook icon" width={32} height={32} />
             <p className={className.textButton}>Continue with Facebook</p>
           </div>
         </Button>
 
         <Button className={className.googleButton.button} intent="red" type="button">
           <div>
-            <Image className={className.googleButton.icon} src="/google_icon.svg" alt="facebook icon" width={45} height={45} />
+            <Image className={className.googleButton.icon} src={googleIcon} alt="facebook icon" width={45} height={45} />
             <p className={className.textButton}>Continue with Facebook</p>
           </div>
         </Button>

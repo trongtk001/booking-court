@@ -4,6 +4,8 @@ import AuthProvider from '@/Components/auth-provider/auth-provider';
 import { Session } from 'next-auth';
 import Flowbite from '@/Components/flow-bite/flowbite';
 import { theme } from './theme';
+import SWRConfig from '@/configs/SWRConfig';
+import fetcher from '@/service/client/fetcher';
 const nuntito = Nunito({ subsets: ['latin'] });
 
 export const metadata = {
@@ -21,7 +23,9 @@ export default function RootLayout({ children, session }: IRootLayoutProps) {
     <html lang="en">
       <body className={nuntito.className + ' '} suppressHydrationWarning={true}>
         <AuthProvider session={session}>
-          <Flowbite theme={{ theme }}>{children}</Flowbite>
+          <Flowbite theme={{ theme }}>
+            <SWRConfig>{children}</SWRConfig>
+          </Flowbite>
         </AuthProvider>
       </body>
     </html>

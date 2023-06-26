@@ -12,8 +12,8 @@ export default function AdminLayout({ children }: IAdminLayoutProps) {
     <div>
       <div className="flex divide-x">
         <AppSidebar className="mr-2 max-[1024px]:hidden" />
-        <div className="w-full h-200">
-          <div className="mx-20">{children}</div>
+        <div className="w-full min-h-200">
+          <div className="md:mx-20">{children}</div>
         </div>
       </div>
     </div>

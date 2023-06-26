@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 //"",
 const button = cva(
   [
-    'rounded-lg gap-2 relative text-white duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500',
+    'button rounded-lg gap-2 relative text-white duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500',
   ],
   {
     variants: {
@@ -14,7 +14,7 @@ const button = cva(
         blue: 'bg-blue-600 hover:bg-blue-700 active:bg-blue-500',
       },
       size: {
-        small: '',
+        small: 'w-40 h-11',
         medium: '',
         large: 'w-[350px] h-11',
       },
