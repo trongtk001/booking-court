@@ -1,9 +1,10 @@
 import { User } from '@/model/user';
 import { publicRoutes } from '@/routes';
-import { AuthOptions } from 'next-auth';
+import login from '@/service/server/login';
+import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-export const authOptions: AuthOptions = {
+export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     CredentialsProvider({
@@ -15,20 +16,15 @@ export const authOptions: AuthOptions = {
         const { email, password } = credentials as any;
 
         try {
-          const response = await fetch(process.env.NEXTAUTH_URL + '/api/User/Login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
-          });
-          const user = (await response.json()).result;
-          if (response.ok && user) {
+          const response = await login(email, password);
+          const user = response.result;
+          if (response.status == 'OK' && user) {
             return user;
           }
         } catch (error) {
           console.log('authOptions', error);
           throw new Error('Invalid credentials');
         }
-        // return null;
       },
     }),
   ],

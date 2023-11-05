@@ -51,12 +51,6 @@ export default function SideBar(props: ISideBarProps) {
           <span>1trđ</span>
         </div>
       </div>
-      <div>
-        <h5 className={className.title}>Rating</h5>
-        <Rating className={className.rating} totalStar={5} filledStar={5} />
-        <Rating className={className.rating} totalStar={5} filledStar={4} />
-        <Rating className={className.rating} totalStar={5} filledStar={3} />
-      </div>
     </div>
   );
 }

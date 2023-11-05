@@ -1,5 +1,5 @@
 import { publicRoutes } from '@/routes';
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 
 export interface IHomeProps {}
 

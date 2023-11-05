@@ -7,7 +7,15 @@ export const theme: CustomFlowbiteTheme = {
     },
   },
   navbar: {
-    link: { base: 'md:hover:text-primary' },
+    link: {
+      base: 'md:hover:text-primary',
+      active: {
+        on: 'text-primary',
+      },
+    },
+    collapse: {
+      base: 'w-full md:block md:w-auto pb-2',
+    },
   },
   pagination: {
     base: 'flex justify-center items-center space-x-2 mt-4',
@@ -30,6 +38,11 @@ export const theme: CustomFlowbiteTheme = {
         hover:bg-gray-100 hover:text-gray-700 hover:cursor-pointer
         dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white inline-flex`,
       },
+    },
+  },
+  dropdown: {
+    floating: {
+      item: {},
     },
   },
 };

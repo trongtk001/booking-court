@@ -8,5 +8,5 @@ interface IProps {
 }
 
 export default function SWRConfig({ children }: IProps) {
-  return <SWR value={{ fetcher: (url) => fetcher(url) }}>{children}</SWR>;
+  return <SWR value={{ fetcher: (url) => fetcher.get(url), revalidateOnFocus: false }}>{children}</SWR>;
 }

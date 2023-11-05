@@ -1,6 +1,12 @@
-const getCourt = () =>
-  fetch(process.env.NEXTAUTH_URL + '/api/court', {
-    method: 'GET',
+import { Court } from '@/model';
+
+const postCourt = (data: Court) =>
+  fetch('/api/court', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 
-export { getCourt };
+export { postCourt };

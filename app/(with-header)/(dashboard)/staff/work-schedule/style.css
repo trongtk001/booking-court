@@ -1,0 +1,12 @@
+:root {
+  --fc-button-bg-color: #58d66c;
+  --fc-button-hover-bg-color: #9beca8;
+  --fc-button-border-color: #ffffff00;
+  --fc-button-hover-border-color: #ffffff00;
+  --fc-button-active-bg-color: #58d66c;
+  --fc-button-active-border-color: #ffffff00;
+}
+
+.fc.fc-media-screen {
+  max-height: 76vh;
+}

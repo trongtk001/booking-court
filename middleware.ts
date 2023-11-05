@@ -1,16 +1,19 @@
 import { withAuth } from 'next-auth/middleware';
+import { adminRoutes, staffRoutes, privateRoutes, publicRoutes } from './routes';
 
 export default withAuth({
   callbacks: {
     authorized({ req, token }) {
-      if (req.nextUrl.pathname.includes('/admin')) {
-        return token?.role === 2;
+      const partname = req.nextUrl.pathname;
+
+      const isAdminRoute = Object.values(adminRoutes).some((route) => partname.includes(route));
+      const isStaffRoute = Object.values(staffRoutes).some((route) => partname.includes(route));
+      const isPrivateRoute = Object.values(privateRoutes).some((route) => partname.includes(route));
+
+      if (isPrivateRoute || isAdminRoute || isStaffRoute) {
+        return !!token;
       }
-      return !!token;
+      return true;
     },
   },
 });
-
-export const config = {
-  matcher: ['/admin/:path*'],
-};

@@ -1,20 +1,18 @@
 'use client';
 import Button from '@/Components/button';
-import { publicRoutes } from '@/routes';
-import { signIn } from 'next-auth/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import { FormEvent } from 'react';
 import facebookIcon from '@/public/facebook.png';
 import googleIcon from '@/public/google_icon.svg';
+import { publicRoutes } from '@/routes';
+import { signIn, signOut } from 'next-auth/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { FormEvent, useEffect } from 'react';
 
 const className = {
   form: 'flex flex-col',
   label: 'h-4 font-semibold text-xs leading-4 text-textLight mb-1',
-  input:
-    'w-[350px] h-10 outline-none rounded-lg border-grayLight border-[1px] mb-5 ' +
-    'focus:ring-primaryLight focus:ring-2 focus:border-none',
+  input: 'w-[350px] h-10 outline-none rounded-lg border-grayLight border-[1px] mb-5 ' + 'focus:ring-primaryLight focus:ring-2 focus:border-none',
   optional: {
     container: 'h-11 flex',
     keepLogin: 'basis-1/2',
@@ -42,7 +40,15 @@ const className = {
 };
 
 export default function LoginForm() {
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+  useEffect(() => {
+    if (pathname === publicRoutes.login) {
+      // signOut();
+
+      console.log(123);
+    }
+  }, [pathname]);
 
   async function handleSumit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -58,7 +64,7 @@ export default function LoginForm() {
       email: data.email,
       password: data.password,
       redirect: true,
-      callbackUrl: searchParams?.get('callbackUrl') || '/admin/calendar',
+      callbackUrl: searchParams?.get('callbackUrl') || publicRoutes.browserCourt,
     });
   }
 
@@ -94,14 +100,14 @@ export default function LoginForm() {
           <hr className={className.orTitle.line} />
         </div>
 
-        <Button className={className.faceBookButton.button} intent="blue">
+        <Button disabled className={className.faceBookButton.button} intent="blue">
           <div>
             <Image className={className.faceBookButton.icon} src={facebookIcon} alt="facebook icon" width={32} height={32} />
             <p className={className.textButton}>Continue with Facebook</p>
           </div>
         </Button>
 
-        <Button className={className.googleButton.button} intent="red" type="button">
+        <Button disabled className={className.googleButton.button} intent="red" type="button">
           <div>
             <Image className={className.googleButton.icon} src={googleIcon} alt="facebook icon" width={45} height={45} />
             <p className={className.textButton}>Continue with Facebook</p>

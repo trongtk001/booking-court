@@ -1,4 +1,5 @@
-import { privateRoutes, publicRoutes } from '@/routes';
+import { role } from '@/model';
+import { privateRoutes, publicRoutes, staffRoutes } from '@/routes';
 
 export const headerLink = [
   {
@@ -15,10 +16,21 @@ export const headerLink = [
 
 export const dropdownLink = [
   {
+    name: 'profile',
+    title: 'Profile',
+    path: privateRoutes.profile,
+  },
+  {
+    name: 'working-profile',
+    title: 'Working profile',
+    path: staffRoutes.workingProfile,
+    role: [role.staff],
+  },
+  {
     name: 'dashboard',
     title: 'Dashboard',
     path: privateRoutes.managerCourt,
-    admin: true,
+    role: [role.admin, role.staff],
   },
   {
     name: 'setting',

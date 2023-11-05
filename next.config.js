@@ -9,11 +9,13 @@ const nextConfig = {
       },
     ];
   },
-  env: {
-    API_URL: 'http://localhost:5108',
-    NEXTAUTH_URL: 'http://localhost:3000',
-    NEXTAUTH_SECRET: 'secret',
-    API_PREFIX: '/api',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+      },
+    ],
   },
 };
 

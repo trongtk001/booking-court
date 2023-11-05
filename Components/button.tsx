@@ -3,9 +3,7 @@ import { twMerge } from 'tailwind-merge';
 
 //"",
 const button = cva(
-  [
-    'button rounded-lg gap-2 relative text-white duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500',
-  ],
+  'button rounded-lg gap-2 relative text-white duration-300 shadow-sm hover:duration-100 active:top-[1px] active:shadow-buttonShadow active:shadow-slate-500',
   {
     variants: {
       intent: {
@@ -17,6 +15,9 @@ const button = cva(
         small: 'w-40 h-11',
         medium: '',
         large: 'w-[350px] h-11',
+      },
+      disabled: {
+        true: 'opacity-10 cursor-not-allowed',
       },
     },
     defaultVariants: {
@@ -35,7 +36,7 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 export default function Button({ className, intent, size, children, disabled, type, ...props }: IButtonProps) {
   return (
     <>
-      <button className={twMerge(button({ intent, size, className }))} disabled={disabled} type={type} {...props}>
+      <button className={twMerge(button({ intent, size, className, disabled }))} disabled={disabled} type={type} {...props}>
         {children}
       </button>
     </>
